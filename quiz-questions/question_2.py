@@ -29,7 +29,13 @@ def number_of_customers_per_state(customers):
     }
     """
     # Write your code here
-    pass
+    final_dict = {}
+    for key in customers:
+        if len(customers[key]) == None:
+            final_dict.update({key:None})
+        else:
+            final_dict.update({key:len(customers[key])
+    return final_dict
 
 
 class NumberOfCustomersPerStateTestCase(unittest.TestCase):
